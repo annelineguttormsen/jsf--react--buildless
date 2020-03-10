@@ -1,14 +1,19 @@
-// Creaste App component
+// Create App component
 function App(props) {
     // convert data to HTML
     return (
         <h1 className="title">Hello, {props.name}!</h1>
+        <Image src="https://www.maxi-muth.de/wordpress/wp-content/uploads/2014/09/Professortocat_v2.png" alt="Github logo">
     );
 }
 
-// Render application
+function Image(props) {
+	return(
+		<img src={props.src} alt={props.alt}/>
+	);
+}
+
 ReactDOM.render(
-    // pass in { name: "World" } props
     <App name="World" />, 
     document.getElementById("root")
 );
